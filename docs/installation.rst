@@ -15,8 +15,8 @@ Installation via pip
 
 .. code-block:: bash
 
-   git clone https://github.com/votre-repo/P3_Blackjack_RL.git
-   cd P3_Blackjack_RL
+   git https://github.com/Saif-dbot/BlackJack
+   cd PBlackJack
 
 2. Créer un environnement virtuel:
 
