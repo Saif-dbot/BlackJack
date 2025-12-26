@@ -2,49 +2,45 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Système complet d'apprentissage par renforcement pour comparer des stratégies naïves et avec comptage de cartes au Blackjack.
 
-## 📊 Résultats Clés
+## Résultats Clés
 
-- **12 agents RL implémentés** : Q-Learning, SARSA, Monte Carlo, DQN
-- **Meilleur agent** : Monte Carlo Count (46.5% de taux de victoire)
-- **Meilleur optimisé** : SARSA (43.5%, proche de la stratégie de base optimale à 42.68%)
-- **234 configurations testées** via recherche de grille hyperparamètres
-- **Interface Streamlit interactive** pour jouer contre les agents
+Ce projet présente une implémentation complète de 12 agents d'apprentissage par renforcement appliqués au jeu de Blackjack. Les résultats montrent que :
 
-## 📚 Documentation
+- 12 agents RL ont été implémentés et testés : Q-Learning, SARSA, Monte Carlo, DQN
+- Le meilleur agent est Monte Carlo Count avec un taux de victoire de 46.5%
+- Après optimisation, SARSA atteint 43.5%, se rapprochant de la stratégie de base optimale à 42.68%
+- 234 configurations différentes ont été testées via recherche de grille hyperparamètres
+- Une interface Streamlit interactive permet de jouer contre les agents entraînés
 
-- **[Rapport détaillé](rapport.pdf)** : Analyse complète du projet (~40 pages)
-- **[Présentation](presentation.pdf)** : Slides de présentation (~25 slides)
-- **[Documentation ReadTheDocs](docs/)** : Guide utilisateur et documentation technique
-- **[Guide LaTeX](LATEX_README.md)** : Instructions de compilation des documents
+## Documentation
 
-## 🎯 Objectif
+Pour consulter la documentation complète du projet, veuillez visiter la [Documentation ReadTheDocs](docs/).
 
-Comparer deux approches de jeu au Blackjack :
-1. **Stratégie Naïve** : Agents apprennent sans information sur le comptage des cartes
-2. **Stratégie avec Comptage** : Agents utilisent le système Hi-Lo pour optimiser leurs décisions
+## Objectif
 
-## 🚀 Quick Start
+Ce projet compare deux approches distinctes pour jouer au Blackjack :
 
-### Installation
+1. Stratégie Naïve : Les agents apprennent à jouer sans aucune information sur le comptage des cartes, en se basant uniquement sur leur expérience.
+2. Stratégie avec Comptage : Les agents utilisent le système Hi-Lo de comptage de cartes pour optimiser leurs décisions et améliorer leurs performances.
+
+## Installation
+
+Pour installer et utiliser ce projet :
 
 ```bash
-# Cloner le projet
-git clone https://github.com/votre-username/P3_Blackjack_RL.git
-cd P3_Blackjack_RL
+# Cloner le repository
+git clone https://github.com/votre-username/blackjack-rl.git
+cd blackjack-rl
 
 # Créer un environnement virtuel
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+venv\Scripts\activate
 
 # Installer les dépendances
 pip install -r requirements.txt
-
-# Installer le package en mode développement
 pip install -e .
 ```
 
@@ -78,18 +74,7 @@ python scripts/train_naive.py --config config/agents_naive/mc.yaml
 python scripts/generate_results_plots.py
 ```
 
-### Compiler la Documentation LaTeX
-
-```bash
-# Windows PowerShell
-.\compile_latex.ps1
-
-# Ou manuellement
-pdflatex rapport.tex
-pdflatex presentation.tex
-```
-
-## 📊 Résultats Attendus
+## Résultats Attendus
 
 | Agent | Type | Win Rate (Naïf) | Win Rate (Comptage) | Amélioration |
 |-------|------|-----------------|---------------------|--------------|
@@ -98,7 +83,7 @@ pdflatex presentation.tex
 | **SARSA** | Tabular | ≥42% | ≥45% | +3-5% |
 | **DQN** | Deep RL | ≥38% | ≥42% | +4-6% |
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 P3_Blackjack_RL/
@@ -117,7 +102,7 @@ P3_Blackjack_RL/
 └── scripts/              # Scripts d'entraînement CLI
 ```
 
-## 🎓 Algorithmes Implémentés
+## Algorithmes Implémentés
 
 ### Agents Naïfs
 
@@ -148,37 +133,38 @@ High cards (10-A): -1
 # True Count = Running Count / Decks Remaining
 ```
 
-## 📈 Interface Streamlit (En développement)
+## Interface Streamlit
+
+L'interface Streamlit permet d'interagir avec les agents entraînés :
 
 ```bash
-# Lancer l'interface
-streamlit run streamlit_app/app.py
+streamlit run streamlit_app/main.py
 ```
 
-**Pages disponibles** :
-1. 🏠 **Accueil** : Documentation et guide
-2. 🎓 **Training** : Entraînement interactif
-3. 📊 **Comparison** : Comparaison agents
-4. 🎮 **Simulation** : Jouer contre l'agent
-5. 🃏 **Card Counting** : Analyse du comptage
-6. 📈 **Dashboard** : Vue d'ensemble
+Pages disponibles :
+1. Accueil : Documentation et guide
+2. Training : Entraînement interactif
+3. Comparison : Comparaison des agents
+4. Simulation : Jouer contre l'agent
+5. Card Counting : Analyse du comptage
+6. Dashboard : Vue d'ensemble
 
-## 🧪 Tests
+## Tests
 
-Le projet maintient une couverture de tests ≥80% :
+Le projet maintient une couverture de tests supérieure ou égale à 80% :
 
 ```bash
-# Tests rapides
+# Exécuter les tests
 pytest tests/ -v --tb=short
 
-# Tests avec rapport détaillé
+# Tests avec rapport de couverture
 pytest tests/ -v --cov=src --cov-report=term-missing
 
-# Tests d'un module spécifique
+# Tester un module spécifique
 pytest tests/test_card_counting.py -v -s
 ```
 
-## 📚 Configuration
+## Configuration
 
 Les agents sont configurés via fichiers YAML :
 
@@ -199,14 +185,16 @@ training:
   eval_frequency: 5000
 ```
 
-## 🔬 Développement
+## Développement
 
 ### Standards de Code
 
-- **Formatage** : Black (line length 100)
-- **Type hints** : mypy --strict
-- **Docstrings** : Google format
-- **Tests** : pytest avec ≥80% coverage
+Le projet respecte les standards suivants :
+
+- Formatage : Black (line length 100)
+- Type hints : mypy --strict
+- Docstrings : Google format
+- Tests : pytest avec au moins 80% de couverture
 
 ### Pré-commit
 
@@ -225,26 +213,22 @@ mypy src/ --strict
 pytest tests/ --cov=src
 ```
 
-## 📊 Résultats Scientifiques
+## Résultats Scientifiques
 
-Le comptage de cartes Hi-Lo améliore significativement la performance :
-- **Amélioration moyenne** : +3-5% win rate
-- **P-value** : < 0.05 (différence significative)
-- **Cohen's d** : > 0.5 (effet modéré)
+Les résultats démontrent que le système de comptage de cartes Hi-Lo améliore significativement les performances des agents :
 
-## 📄 License
+- Amélioration moyenne du taux de victoire : +3-5%
+- P-value < 0.05 (différence statistiquement significative)
+- Cohen's d > 0.5 (effet modéré)
 
-MIT License - Voir [LICENSE](LICENSE)
+## Contact
 
-## 🤝 Contributions
+Pour toute question ou suggestion concernant ce projet :
 
-Ce projet suit strictement le [PROJECT_GUIDE.md](PROJECT_GUIDE.md) pour toutes les implémentations.
-
-## 📞 Contact
-
-Pour questions ou suggestions, créer une issue sur le repository.
+- Email : saifeddinefaten06@gmail.com
+- Téléphone : +212 609556995
 
 ---
 
-**Status** : ✅ Phase 1-2 complètes (Environnement + Agents naïfs fonctionnels)  
-**Prochaines étapes** : Agents avec comptage, Interface Streamlit, Évaluation complète
+Statut : Phase 1-2 complètes (Environnement et Agents naïfs fonctionnels)
+Prochaines étapes : Finalisation des agents avec comptage, amélioration de l'interface Streamlit, évaluation complète
