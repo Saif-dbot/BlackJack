@@ -64,9 +64,6 @@ coverage.xml
 .dmypy.json
 dmypy.json
 
-# Logs - INCLUSION ACTIVÉE POUR LE PUSH
-# data/logs/**/*.log
-
 # LaTeX temporaires
 *.aux
 *.log
