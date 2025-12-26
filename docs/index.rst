@@ -3,18 +3,15 @@ Blackjack RL Agents Documentation
 
 .. image:: https://img.shields.io/badge/Python-3.8%2B-blue
    :alt: Python Version
-   
-.. image:: https://img.shields.io/badge/License-MIT-green
-   :alt: License
 
-Bienvenue dans la documentation du projet **Blackjack RL Agents**!
+Bienvenue dans la documentation du projet Blackjack RL Agents.
 
-Ce projet implémente et compare **12 agents de Reinforcement Learning** pour jouer au Blackjack,
+Ce projet implémente et compare 12 agents de Reinforcement Learning pour jouer au Blackjack,
 utilisant différentes approches d'apprentissage (Q-Learning, SARSA, DQN, Monte Carlo) avec 
 et sans comptage de cartes Hi-Lo.
 
-**Développé par:** FATEN Saif Eddine  
-**Version:** 1.0.0
+Développé par FATEN Saif Eddine
+Version 1.0.0
 
 Objectifs du Projet
 -------------------
@@ -57,7 +54,6 @@ Table des Matières
    :caption: Ressources
 
    references
-   contributing
 
 Liens Rapides
 =============

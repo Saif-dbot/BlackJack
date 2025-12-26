@@ -149,21 +149,6 @@ Pages disponibles :
 5. Card Counting : Analyse du comptage
 6. Dashboard : Vue d'ensemble
 
-## Tests
-
-Le projet maintient une couverture de tests supérieure ou égale à 80% :
-
-```bash
-# Exécuter les tests
-pytest tests/ -v --tb=short
-
-# Tests avec rapport de couverture
-pytest tests/ -v --cov=src --cov-report=term-missing
-
-# Tester un module spécifique
-pytest tests/test_card_counting.py -v -s
-```
-
 ## Configuration
 
 Les agents sont configurés via fichiers YAML :
