@@ -58,15 +58,6 @@ Pour vérifier que l'installation est réussie:
 
    python -c "import src; print('Installation réussie!')"
 
-Tests
------
-
-Exécuter les tests unitaires:
-
-.. code-block:: bash
-
-   pytest tests/
-
 Configuration Optionnelle
 -------------------------
 
