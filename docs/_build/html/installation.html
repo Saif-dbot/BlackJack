@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; Blackjack RL Agents 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utilisation" href="usage.html" />
+    <link rel="prev" title="Blackjack RL Agents Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Blackjack RL Agents
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Guide Utilisateur</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-via-pip">Installation via pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependances-principales">Dépendances Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verification-de-l-installation">Vérification de l’Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-optionnelle">Configuration Optionnelle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cuda">CUDA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemes-courants">Problèmes Courants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Utilisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#interface-streamlit">Interface Streamlit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#lancement-de-l-application">Lancement de l’Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#pages-disponibles">Pages Disponibles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#entrainement-des-agents">Entraînement des Agents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#agents-naifs">Agents Naïfs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#agents-avec-counting">Agents avec Counting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#grid-search">Grid Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#reentrainement-avec-hyperparametres-optimaux">Réentraînement avec Hyperparamètres Optimaux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#analyse-et-comparaison">Analyse et Comparaison</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#comparer-avec-basic-strategy">Comparer avec Basic Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#generer-les-graphiques">Générer les Graphiques</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#utilisation-programmatique">Utilisation Programmatique</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#charger-un-agent">Charger un Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#jouer-une-partie">Jouer une Partie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#evaluer-un-agent">Évaluer un Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#fichiers-de-configuration-yaml">Fichiers de Configuration YAML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#modifier-les-parametres">Modifier les Paramètres</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#exemples-avances">Exemples Avancés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#entrainement-personnalise">Entraînement Personnalisé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#comparaison-multi-agents">Comparaison Multi-Agents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Résultats Expérimentaux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="results.html#vue-d-ensemble">Vue d’Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#graphiques-comparatifs">Graphiques Comparatifs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#analyse-par-algorithme">Analyse par Algorithme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="results.html#q-learning">Q-Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#sarsa">SARSA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#monte-carlo">Monte Carlo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#dqn">DQN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#comparaison-naif-vs-counting">Comparaison Naïf vs Counting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="results.html#grid-search">Grid Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#insights">Insights</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#comparaison-avec-strategie-de-base">Comparaison avec Stratégie de Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#temps-d-entrainement">Temps d’Entraînement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#reproductibilite">Reproductibilité</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blackjack RL Agents</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<section id="prerequis">
+<h2>Prérequis<a class="headerlink" href="#prerequis" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Python 3.8 ou supérieur</p></li>
+<li><p>pip (gestionnaire de paquets Python)</p></li>
+<li><p>(Optionnel) CUDA pour l’entraînement accéléré des DQN</p></li>
+</ul>
+</section>
+<section id="installation-via-pip">
+<h2>Installation via pip<a class="headerlink" href="#installation-via-pip" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Cloner le repository:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/votre-repo/P3_Blackjack_RL.git
+<span class="nb">cd</span><span class="w"> </span>P3_Blackjack_RL
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Créer un environnement virtuel:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w">  </span><span class="c1"># Linux/Mac</span>
+venv<span class="se">\\</span>Scripts<span class="se">\\</span>activate<span class="w">    </span><span class="c1"># Windows</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Installer les dépendances:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Installer le package en mode développement:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="dependances-principales">
+<h2>Dépendances Principales<a class="headerlink" href="#dependances-principales" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>NumPy</strong> (≥1.21.0): Calculs numériques</p></li>
+<li><p><strong>PyTorch</strong> (≥1.10.0): Réseaux de neurones pour DQN</p></li>
+<li><p><strong>Streamlit</strong> (≥1.20.0): Interface web interactive</p></li>
+<li><p><strong>Matplotlib</strong> (≥3.5.0): Visualisations</p></li>
+<li><p><strong>Plotly</strong> (≥5.0.0): Graphiques interactifs</p></li>
+<li><p><strong>Pandas</strong> (≥1.4.0): Manipulation de données</p></li>
+<li><p><strong>PyYAML</strong> (≥6.0): Configuration</p></li>
+</ul>
+</section>
+<section id="verification-de-l-installation">
+<h2>Vérification de l’Installation<a class="headerlink" href="#verification-de-l-installation" title="Link to this heading"></a></h2>
+<p>Pour vérifier que l’installation est réussie:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import src; print(&#39;Installation réussie!&#39;)&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Link to this heading"></a></h2>
+<p>Exécuter les tests unitaires:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>tests/
+</pre></div>
+</div>
+</section>
+<section id="configuration-optionnelle">
+<h2>Configuration Optionnelle<a class="headerlink" href="#configuration-optionnelle" title="Link to this heading"></a></h2>
+<section id="cuda">
+<h3>CUDA<a class="headerlink" href="#cuda" title="Link to this heading"></a></h3>
+<p>Pour utiliser CUDA avec PyTorch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>torchvision<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/cu118
+</pre></div>
+</div>
+<p>Vérifier CUDA:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CUDA disponible: </span><span class="si">{</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device: </span><span class="si">{</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="problemes-courants">
+<h2>Problèmes Courants<a class="headerlink" href="#problemes-courants" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Import Error sur streamlit</strong></dt><dd><p>Réinstaller streamlit: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">streamlit</span></code></p>
+</dd>
+<dt><strong>Erreur PyTorch CUDA</strong></dt><dd><p>Installer la version CPU: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">torch</span> <span class="pre">--index-url</span> <span class="pre">https://download.pytorch.org/whl/cpu</span></code></p>
+</dd>
+<dt><strong>Module ‘src’ non trouvé</strong></dt><dd><p>Installer en mode développement: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Blackjack RL Agents Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="Utilisation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, FATEN Saif Eddine.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

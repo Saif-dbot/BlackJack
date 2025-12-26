@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack RL Agents Documentation &mdash; Blackjack RL Agents 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Blackjack RL Agents
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Guide Utilisateur</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-via-pip">Installation via pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependances-principales">Dépendances Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verification-de-l-installation">Vérification de l’Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration-optionnelle">Configuration Optionnelle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#cuda">CUDA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#problemes-courants">Problèmes Courants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Utilisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#interface-streamlit">Interface Streamlit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#lancement-de-l-application">Lancement de l’Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#pages-disponibles">Pages Disponibles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#entrainement-des-agents">Entraînement des Agents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#agents-naifs">Agents Naïfs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#agents-avec-counting">Agents avec Counting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#grid-search">Grid Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#reentrainement-avec-hyperparametres-optimaux">Réentraînement avec Hyperparamètres Optimaux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#analyse-et-comparaison">Analyse et Comparaison</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#comparer-avec-basic-strategy">Comparer avec Basic Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#generer-les-graphiques">Générer les Graphiques</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#utilisation-programmatique">Utilisation Programmatique</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#charger-un-agent">Charger un Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#jouer-une-partie">Jouer une Partie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#evaluer-un-agent">Évaluer un Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#fichiers-de-configuration-yaml">Fichiers de Configuration YAML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#modifier-les-parametres">Modifier les Paramètres</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#exemples-avances">Exemples Avancés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#entrainement-personnalise">Entraînement Personnalisé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#comparaison-multi-agents">Comparaison Multi-Agents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Résultats Expérimentaux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="results.html#vue-d-ensemble">Vue d’Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#graphiques-comparatifs">Graphiques Comparatifs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#analyse-par-algorithme">Analyse par Algorithme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="results.html#q-learning">Q-Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#sarsa">SARSA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#monte-carlo">Monte Carlo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#dqn">DQN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#comparaison-naif-vs-counting">Comparaison Naïf vs Counting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="results.html#grid-search">Grid Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="results.html#insights">Insights</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#comparaison-avec-strategie-de-base">Comparaison avec Stratégie de Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#temps-d-entrainement">Temps d’Entraînement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#reproductibilite">Reproductibilité</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Blackjack RL Agents</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Blackjack RL Agents Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blackjack-rl-agents-documentation">
+<h1>Blackjack RL Agents Documentation<a class="headerlink" href="#blackjack-rl-agents-documentation" title="Link to this heading"></a></h1>
+<img alt="Python Version" src="https://img.shields.io/badge/Python-3.8%2B-blue" />
+<p>Bienvenue dans la documentation du projet Blackjack RL Agents.</p>
+<p>Ce projet implémente et compare 12 agents de Reinforcement Learning pour jouer au Blackjack,
+utilisant différentes approches d’apprentissage (Q-Learning, SARSA, DQN, Monte Carlo) avec
+et sans comptage de cartes Hi-Lo.</p>
+<p>Développé par FATEN Saif Eddine
+Version 1.0.0</p>
+<section id="objectifs-du-projet">
+<h2>Objectifs du Projet<a class="headerlink" href="#objectifs-du-projet" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Entraîner des agents avec différents algorithmes RL</p></li>
+<li><p>Comparer les performances avec et sans card counting</p></li>
+<li><p>Optimiser les hyperparamètres pour maximiser le taux de victoire</p></li>
+<li><p>Comparer avec la stratégie de base optimale (Basic Strategy)</p></li>
+</ul>
+</section>
+<section id="resultats-cles">
+<h2>Résultats Clés<a class="headerlink" href="#resultats-cles" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>12 agents entraînés</strong> (5 naïfs, 4 counting, 3 optimisés)</p></li>
+<li><p><strong>Meilleur agent:</strong> SARSA Optimisé avec 43.5% de taux de victoire</p></li>
+<li><p><strong>Performance proche de l’optimal théorique</strong> (42.68%)</p></li>
+<li><p><strong>Interface interactive Streamlit</strong> pour visualisation et jeu</p></li>
+</ul>
+</section>
+</section>
+<section id="table-des-matieres">
+<h1>Table des Matières<a class="headerlink" href="#table-des-matieres" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Guide Utilisateur</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-via-pip">Installation via pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependances-principales">Dépendances Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verification-de-l-installation">Vérification de l’Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration-optionnelle">Configuration Optionnelle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#problemes-courants">Problèmes Courants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Utilisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#interface-streamlit">Interface Streamlit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#entrainement-des-agents">Entraînement des Agents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#analyse-et-comparaison">Analyse et Comparaison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#utilisation-programmatique">Utilisation Programmatique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#exemples-avances">Exemples Avancés</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="results.html">Résultats Expérimentaux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="results.html#vue-d-ensemble">Vue d’Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#graphiques-comparatifs">Graphiques Comparatifs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#analyse-par-algorithme">Analyse par Algorithme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#comparaison-naif-vs-counting">Comparaison Naïf vs Counting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#comparaison-avec-strategie-de-base">Comparaison avec Stratégie de Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#temps-d-entrainement">Temps d’Entraînement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html#reproductibilite">Reproductibilité</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="liens-rapides">
+<h1>Liens Rapides<a class="headerlink" href="#liens-rapides" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, FATEN Saif Eddine.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

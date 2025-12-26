@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résultats Expérimentaux &mdash; Blackjack RL Agents 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Utilisation" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Blackjack RL Agents
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Guide Utilisateur</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequis">Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-via-pip">Installation via pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#dependances-principales">Dépendances Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verification-de-l-installation">Vérification de l’Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration-optionnelle">Configuration Optionnelle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#cuda">CUDA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#problemes-courants">Problèmes Courants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Utilisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#interface-streamlit">Interface Streamlit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#lancement-de-l-application">Lancement de l’Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#pages-disponibles">Pages Disponibles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#entrainement-des-agents">Entraînement des Agents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#agents-naifs">Agents Naïfs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#agents-avec-counting">Agents avec Counting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#grid-search">Grid Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#reentrainement-avec-hyperparametres-optimaux">Réentraînement avec Hyperparamètres Optimaux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#analyse-et-comparaison">Analyse et Comparaison</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#comparer-avec-basic-strategy">Comparer avec Basic Strategy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#generer-les-graphiques">Générer les Graphiques</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#utilisation-programmatique">Utilisation Programmatique</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#charger-un-agent">Charger un Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#jouer-une-partie">Jouer une Partie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#evaluer-un-agent">Évaluer un Agent</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#fichiers-de-configuration-yaml">Fichiers de Configuration YAML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#modifier-les-parametres">Modifier les Paramètres</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#exemples-avances">Exemples Avancés</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#entrainement-personnalise">Entraînement Personnalisé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#comparaison-multi-agents">Comparaison Multi-Agents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Résultats Expérimentaux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vue-d-ensemble">Vue d’Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graphiques-comparatifs">Graphiques Comparatifs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analyse-par-algorithme">Analyse par Algorithme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#q-learning">Q-Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sarsa">SARSA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monte-carlo">Monte Carlo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dqn">DQN</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparaison-naif-vs-counting">Comparaison Naïf vs Counting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimisation-des-hyperparametres">Optimisation des Hyperparamètres</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#grid-search">Grid Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insights">Insights</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparaison-avec-strategie-de-base">Comparaison avec Stratégie de Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#temps-d-entrainement">Temps d’Entraînement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reproductibilite">Reproductibilité</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blackjack RL Agents</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Résultats Expérimentaux</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/results.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="resultats-experimentaux">
+<h1>Résultats Expérimentaux<a class="headerlink" href="#resultats-experimentaux" title="Link to this heading"></a></h1>
+<p>Cette section présente les résultats détaillés de l’entraînement et de l’évaluation des 12 agents.</p>
+<section id="vue-d-ensemble">
+<h2>Vue d’Ensemble<a class="headerlink" href="#vue-d-ensemble" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Performances Globales</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Agent</p></th>
+<th class="head"><p>Win Rate(%)</p></th>
+<th class="head"><p>Avg Return</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Monte Carlo Count</p></td>
+<td><p><strong>46.5</strong></p></td>
+<td><p>0.012</p></td>
+<td><p>Counting</p></td>
+</tr>
+<tr class="row-odd"><td><p>DQN</p></td>
+<td><p>45.3</p></td>
+<td><p>-0.009</p></td>
+<td><p>Naïf</p></td>
+</tr>
+<tr class="row-even"><td><p>Monte Carlo</p></td>
+<td><p>44.7</p></td>
+<td><p>-0.023</p></td>
+<td><p>Naïf</p></td>
+</tr>
+<tr class="row-odd"><td><p>SARSA Optimized</p></td>
+<td><p><strong>43.5</strong></p></td>
+<td><p>-0.014</p></td>
+<td><p>Optimisé</p></td>
+</tr>
+<tr class="row-even"><td><p>DQN Count</p></td>
+<td><p>43.5</p></td>
+<td><p>-0.024</p></td>
+<td><p>Counting</p></td>
+</tr>
+<tr class="row-odd"><td><p>Qlearning Count</p></td>
+<td><p>42.5</p></td>
+<td><p>-0.045</p></td>
+<td><p>Counting</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Stratégie de Base</strong></p></td>
+<td><p><strong>42.68</strong></p></td>
+<td><p><strong>-0.005</strong></p></td>
+<td><p><strong>Optimal</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="graphiques-comparatifs">
+<h2>Graphiques Comparatifs<a class="headerlink" href="#graphiques-comparatifs" title="Link to this heading"></a></h2>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/win_rates_comparison.png"><img alt="_images/win_rates_comparison.png" src="_images/win_rates_comparison.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Comparaison des taux de victoire par agent</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/category_comparison.png"><img alt="_images/category_comparison.png" src="_images/category_comparison.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Distribution des performances par catégorie</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="analyse-par-algorithme">
+<h2>Analyse par Algorithme<a class="headerlink" href="#analyse-par-algorithme" title="Link to this heading"></a></h2>
+<section id="q-learning">
+<h3>Q-Learning<a class="headerlink" href="#q-learning" title="Link to this heading"></a></h3>
+<p><strong>Baseline</strong>: 39.3% win rate</p>
+<p><strong>Optimized</strong>: 41.4% win rate (+2.1%)</p>
+<p><strong>Meilleurs hyperparamètres</strong>:
+- α = 0.2
+- γ = 1.0
+- ε_min = 0.1</p>
+</section>
+<section id="sarsa">
+<h3>SARSA<a class="headerlink" href="#sarsa" title="Link to this heading"></a></h3>
+<p><strong>Baseline</strong>: 42.4% win rate</p>
+<p><strong>Optimized</strong>: 43.5% win rate (+1.1%)</p>
+<p><strong>Meilleurs hyperparamètres</strong>:
+- α = 0.05
+- γ = 1.0
+- ε_min = 0.1</p>
+<p><strong>Accord avec Basic Strategy</strong>: 92.3%</p>
+</section>
+<section id="monte-carlo">
+<h3>Monte Carlo<a class="headerlink" href="#monte-carlo" title="Link to this heading"></a></h3>
+<p><strong>Baseline</strong>: 44.7% win rate</p>
+<p><strong>With Counting</strong>: 46.5% win rate (+1.8%)</p>
+<p>Meilleur agent global du projet!</p>
+</section>
+<section id="dqn">
+<h3>DQN<a class="headerlink" href="#dqn" title="Link to this heading"></a></h3>
+<p><strong>Baseline</strong>: 45.3% win rate</p>
+<p><strong>Optimized</strong>: 42.6% win rate (-2.7%)</p>
+<p>Architecture:
+- Hidden layers: 2 × 128 neurons
+- Learning rate: 0.001
+- Batch size: 64</p>
+</section>
+</section>
+<section id="comparaison-naif-vs-counting">
+<h2>Comparaison Naïf vs Counting<a class="headerlink" href="#comparaison-naif-vs-counting" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Impact du Comptage de Cartes</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Algorithme</p></th>
+<th class="head"><p>Naïf (%)</p></th>
+<th class="head"><p>Counting (%)</p></th>
+<th class="head"><p>Différence</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Q-Learning</p></td>
+<td><p>39.3</p></td>
+<td><p>42.5</p></td>
+<td><p>+3.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>SARSA</p></td>
+<td><p>42.4</p></td>
+<td><p>42.0</p></td>
+<td><p>-0.4</p></td>
+</tr>
+<tr class="row-even"><td><p>Monte Carlo</p></td>
+<td><p>44.7</p></td>
+<td><p>46.5</p></td>
+<td><p>+1.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>DQN</p></td>
+<td><p>45.3</p></td>
+<td><p>43.5</p></td>
+<td><p>-1.8</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observations</strong>:
+- Amélioration moyenne: +0.7%
+- Monte Carlo bénéficie le plus du counting
+- DQN/SARSA pénalisés par l’espace d’états élargi</p>
+</section>
+<section id="optimisation-des-hyperparametres">
+<h2>Optimisation des Hyperparamètres<a class="headerlink" href="#optimisation-des-hyperparametres" title="Link to this heading"></a></h2>
+<section id="grid-search">
+<h3>Grid Search<a class="headerlink" href="#grid-search" title="Link to this heading"></a></h3>
+<p><strong>234 configurations testées</strong> en 1h44min</p>
+<p><strong>Résultats par algorithme</strong>:</p>
+<dl class="simple">
+<dt>Q-Learning (108 configs):</dt><dd><ul class="simple">
+<li><p>Meilleure config: α=0.2, γ=1.0, ε_min=0.1 → <strong>41.4%</strong></p></li>
+<li><p>Pire config: α=0.3, γ=0.95, ε_min=0.2 → 37.2%</p></li>
+<li><p>Écart: 4.2 points</p></li>
+</ul>
+</dd>
+<dt>SARSA (108 configs):</dt><dd><ul class="simple">
+<li><p>Meilleure config: α=0.05, γ=1.0, ε_min=0.1 → <strong>43.5%</strong></p></li>
+<li><p>Pire config: α=0.3, γ=0.95, ε_min=0.05 → 40.1%</p></li>
+<li><p>Écart: 3.4 points</p></li>
+</ul>
+</dd>
+<dt>DQN (18 configs):</dt><dd><ul class="simple">
+<li><p>Meilleure config: lr=0.001, hidden=128, batch=64 → <strong>42.6%</strong></p></li>
+<li><p>Pire config: lr=0.01, hidden=64, batch=32 → 38.9%</p></li>
+<li><p>Écart: 3.7 points</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="insights">
+<h3>Insights<a class="headerlink" href="#insights" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>γ = 1.0 est optimal</strong> pour tous les algorithmes
+- Épisodes courts (3-10 étapes)
+- Récompense finale la plus importante</p></li>
+<li><p><strong>ε_min élevé (0.1-0.2) améliore les performances</strong>
+- Maintient l’exploration
+- Évite la convergence prématurée</p></li>
+<li><p><strong>Learning rate faible (α=0.05-0.1) pour SARSA</strong>
+- Convergence plus stable
+- Moins de variance</p></li>
+</ol>
+</section>
+</section>
+<section id="comparaison-avec-strategie-de-base">
+<h2>Comparaison avec Stratégie de Base<a class="headerlink" href="#comparaison-avec-strategie-de-base" title="Link to this heading"></a></h2>
+<p>La stratégie de base est la politique optimale mathématiquement prouvée:</p>
+<p><strong>Win rate théorique</strong>: 42.68%</p>
+<p><strong>Accord des agents</strong>:</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Accord avec Basic Strategy</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Agent</p></th>
+<th class="head"><p>WR (%)</p></th>
+<th class="head"><p>Accord(%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SARSA Optimized</p></td>
+<td><p>43.5</p></td>
+<td><p>92.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Q-Learning Opt</p></td>
+<td><p>41.4</p></td>
+<td><p>89.7</p></td>
+</tr>
+<tr class="row-even"><td><p>DQN</p></td>
+<td><p>45.3</p></td>
+<td><p>87.2</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analyse</strong>:
+- SARSA Optimized dépasse légèrement (+0.82%) la stratégie de base
+- Accord élevé (92.3%) confirme l’apprentissage correct
+- Possible variance statistique sur les 10k épisodes de test</p>
+</section>
+<section id="temps-d-entrainement">
+<h2>Temps d’Entraînement<a class="headerlink" href="#temps-d-entrainement" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Durée d’Entraînement</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Agent</p></th>
+<th class="head"><p>Épisodes</p></th>
+<th class="head"><p>Temps (min)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Q-Learning</p></td>
+<td><p>250,000</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>SARSA</p></td>
+<td><p>250,000</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>Monte Carlo</p></td>
+<td><p>200,000</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-odd"><td><p>DQN</p></td>
+<td><p>300,000</p></td>
+<td><p>35</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observations</strong>:
+- Méthodes tabulaires: ~15-20 min
+- DQN: 2× plus lent (réseaux de neurones)
+- Total pour 12 agents: ~6 heures</p>
+</section>
+<section id="reproductibilite">
+<h2>Reproductibilité<a class="headerlink" href="#reproductibilite" title="Link to this heading"></a></h2>
+<p>Pour reproduire les résultats:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Entraîner tous les agents naïfs</span>
+python<span class="w"> </span>scripts/train_naive.py
+
+<span class="c1"># Entraîner les agents counting</span>
+python<span class="w"> </span>scripts/train_counting.py
+
+<span class="c1"># Optimisation des hyperparamètres</span>
+python<span class="w"> </span>scripts/optimize_hyperparams.py
+
+<span class="c1"># Réentraînement avec hyperparamètres optimaux</span>
+python<span class="w"> </span>scripts/retrain_optimized.py
+
+<span class="c1"># Comparaison avec Basic Strategy</span>
+python<span class="w"> </span>scripts/compare_with_basic_strategy.py
+</pre></div>
+</div>
+<p><strong>Note</strong>: Les résultats peuvent varier légèrement (±1%) en raison de l’aléatoire.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Utilisation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, FATEN Saif Eddine.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
