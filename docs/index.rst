@@ -6,12 +6,11 @@ Blackjack RL Agents Documentation
 
 Bienvenue dans la documentation du projet Blackjack RL Agents.
 
-Ce projet implémente et compare 12 agents de Reinforcement Learning pour jouer au Blackjack,
-utilisant différentes approches d'apprentissage (Q-Learning, SARSA, DQN, Monte Carlo) avec 
-et sans comptage de cartes Hi-Lo.
+Ce projet a été développé à l'École Nationale des Arts et Métiers (ENSAM) de Meknès dans le cadre d'un projet académique d'apprentissage par renforcement. Il implémente et compare 12 agents de Reinforcement Learning pour jouer au Blackjack, utilisant différentes approches d'apprentissage (Q-Learning, SARSA, DQN, Monte Carlo) avec et sans comptage de cartes Hi-Lo.
 
 Développé par FATEN Saif Eddine
-Version 1.0.0
+Encadré par M. Tawfik Masrour (Enseignant à l'ENSAM Meknès)
+Version 2.0.0
 
 Objectifs du Projet
 -------------------

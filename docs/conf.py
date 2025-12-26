@@ -6,9 +6,9 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 project = 'Blackjack RL Agents'
-copyright = '2025, FATEN Saif Eddine'
+copyright = '2025, FATEN Saif Eddine - ENSAM Meknès'
 author = 'FATEN Saif Eddine'
-release = '1.0.0'
+release = '2.0.0'
 
 # -- General configuration ---------------------------------------------------
 extensions = [

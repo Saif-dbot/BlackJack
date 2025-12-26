@@ -10,8 +10,8 @@ with open("requirements.txt", "r", encoding="utf-8") as f:
 
 setup(
     name="blackjack-rl",
-    version="1.0.0",
-    author="Blackjack RL Team",
+    version="2.0.0",
+    author="FATEN Saif Eddine",
     description="Reinforcement Learning for Blackjack with Card Counting",
     long_description=long_description,
     long_description_content_type="text/markdown",
