@@ -1,0 +1,11 @@
+{
+  "agent_type": "monte_carlo_count",
+  "with_card_counting": true,
+  "training_time_seconds": 62.632049322128296,
+  "total_episodes": 300000,
+  "final_win_rate": 0.416,
+  "final_avg_return": -0.08,
+  "test_win_rate": 0.465,
+  "test_avg_return": 0.012,
+  "model_path": "data\\models\\counting\\monte_carlo_count_final.pkl"
+}

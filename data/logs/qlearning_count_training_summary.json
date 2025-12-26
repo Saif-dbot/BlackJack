@@ -1,0 +1,11 @@
+{
+  "agent_type": "qlearning_count",
+  "with_card_counting": true,
+  "training_time_seconds": 59.396034717559814,
+  "total_episodes": 300000,
+  "final_win_rate": 0.405,
+  "final_avg_return": -0.095,
+  "test_win_rate": 0.425,
+  "test_avg_return": -0.045,
+  "model_path": "data\\models\\counting\\qlearning_count_final.pkl"
+}

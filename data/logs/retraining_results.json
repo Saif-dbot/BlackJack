@@ -1,0 +1,57 @@
+{
+  "qlearning": {
+    "agent_type": "qlearning",
+    "config": {
+      "alpha": 0.2,
+      "gamma": 1.0,
+      "epsilon": 0.1,
+      "epsilon_decay": 0.9999,
+      "epsilon_min": 0.01
+    },
+    "train_episodes": 250000,
+    "train_time": 12.082237,
+    "train_win_rate": 0.407476,
+    "test_win_rate": 0.4138,
+    "test_avg_return": -0.0572,
+    "timestamp": "2025-12-23T12:39:15.120680"
+  },
+  "sarsa": {
+    "agent_type": "sarsa",
+    "config": {
+      "alpha": 0.05,
+      "gamma": 1.0,
+      "epsilon": 0.1,
+      "epsilon_decay": 0.9999,
+      "epsilon_min": 0.01
+    },
+    "train_episodes": 250000,
+    "train_time": 12.063793,
+    "train_win_rate": 0.414464,
+    "test_win_rate": 0.435,
+    "test_avg_return": -0.01425,
+    "timestamp": "2025-12-23T12:39:27.912753"
+  },
+  "dqn": {
+    "agent_type": "dqn",
+    "config": {
+      "learning_rate": 0.0001,
+      "gamma": 0.99,
+      "epsilon": 0.2,
+      "epsilon_decay": 0.9995,
+      "epsilon_min": 0.01,
+      "memory_size": 10000,
+      "batch_size": 32,
+      "hidden_layers": [
+        128,
+        128
+      ],
+      "target_update_freq": 1000
+    },
+    "train_episodes": 250000,
+    "train_time": 1339.826205,
+    "train_win_rate": 0.4163,
+    "test_win_rate": 0.4257,
+    "test_avg_return": -0.0287,
+    "timestamp": "2025-12-23T13:01:56.958204"
+  }
+}

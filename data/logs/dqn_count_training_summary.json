@@ -1,0 +1,11 @@
+{
+  "agent_type": "dqn_count",
+  "with_card_counting": true,
+  "training_time_seconds": 2072.778376340866,
+  "total_episodes": 300000,
+  "final_win_rate": 0.43,
+  "final_avg_return": -0.048,
+  "test_win_rate": 0.435,
+  "test_avg_return": -0.024,
+  "model_path": "data\\models\\counting\\dqn_count_final.pkl"
+}

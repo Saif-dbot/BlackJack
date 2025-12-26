@@ -1,0 +1,31 @@
+# Configuration for Q-Learning with card counting (TEST version - 5000 episodes)
+agent:
+  type: qlearning_count
+  state_dim: 4  # (player_sum, dealer_card, usable_ace, true_count_bin)
+  action_dim: 2  # STAND=0, HIT=1
+
+environment:
+  deck_type: "finite"      # Finite deck for realistic counting
+  num_decks: 6             # Standard 6-deck shoe
+  natural: true            # 3:2 payout for blackjack
+  sab: false               # No stand-all-bust
+  enable_counting: true    # Enable card counting
+
+hyperparameters:
+  alpha: 0.1               # Learning rate
+  gamma: 1.0               # No discounting
+  epsilon_start: 1.0
+  epsilon_min: 0.01
+  epsilon_decay: 0.999
+
+training:
+  episodes: 5000           # Fast test
+  eval_frequency: 1000
+  eval_episodes: 100
+  save_frequency: 1000
+  seed: 42
+
+output:
+  plots_dir: "data/plots"
+  reports_dir: "data/reports"
+  logs_dir: "data/logs"

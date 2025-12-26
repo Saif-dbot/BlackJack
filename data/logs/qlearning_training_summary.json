@@ -1,0 +1,10 @@
+{
+  "agent_type": "qlearning",
+  "training_time_seconds": 49.19760036468506,
+  "total_episodes": 250000,
+  "final_win_rate": 0.4435,
+  "final_avg_return": -0.015,
+  "test_win_rate": 0.393,
+  "test_avg_return": -0.117,
+  "model_path": "data\\models\\naive\\qlearning_final.pkl"
+}

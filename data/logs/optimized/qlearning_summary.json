@@ -1,0 +1,16 @@
+{
+  "agent_type": "qlearning",
+  "config": {
+    "alpha": 0.2,
+    "gamma": 1.0,
+    "epsilon": 0.1,
+    "epsilon_decay": 0.9999,
+    "epsilon_min": 0.01
+  },
+  "train_episodes": 250000,
+  "train_time": 12.082237,
+  "train_win_rate": 0.407476,
+  "test_win_rate": 0.4138,
+  "test_avg_return": -0.0572,
+  "timestamp": "2025-12-23T12:39:15.120680"
+}

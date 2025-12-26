@@ -1,0 +1,29 @@
+# DQN agent configuration (250k episodes)
+agent:
+  type: dqn
+  state_dim: 3  # (player_sum, dealer_card, usable_ace)
+  action_dim: 2  # STAND=0, HIT=1
+
+hyperparameters:
+  gamma: 1.0              # No discounting for episodic tasks
+  epsilon_start: 1.0      # Initial exploration rate
+  epsilon_min: 0.05       # Minimum exploration rate
+  epsilon_decay: 0.99995  # Slower decay for better exploration
+  learning_rate: 0.001    # Adam learning rate
+  batch_size: 64          # Replay batch size
+  buffer_size: 100000     # Replay buffer capacity
+  target_update_freq: 1000  # Update target network every N steps
+  hidden_dim: 128         # Hidden layer size
+
+training:
+  episodes: 300000        # Total training episodes
+  eval_frequency: 5000    # Evaluate every N episodes
+  eval_episodes: 1000     # Number of evaluation episodes
+  save_frequency: 10000   # Save checkpoint every N episodes
+  seed: 42                # Random seed
+
+environment:
+  deck_type: finite       # 'finite' or 'infinite'
+  num_decks: 6            # Number of decks (for finite)
+  natural: true           # Natural blackjack pays 1.5x
+  sab: true               # Stand after bust

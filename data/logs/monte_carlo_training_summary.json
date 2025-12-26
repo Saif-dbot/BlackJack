@@ -1,0 +1,10 @@
+{
+  "agent_type": "monte_carlo",
+  "training_time_seconds": 55.81404638290405,
+  "total_episodes": 250000,
+  "final_win_rate": 0.423,
+  "final_avg_return": -0.069,
+  "test_win_rate": 0.447,
+  "test_avg_return": -0.023,
+  "model_path": "data\\models\\naive\\monte_carlo_final.pkl"
+}

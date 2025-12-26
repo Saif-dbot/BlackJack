@@ -1,0 +1,16 @@
+{
+  "agent_type": "sarsa",
+  "config": {
+    "alpha": 0.05,
+    "gamma": 1.0,
+    "epsilon": 0.1,
+    "epsilon_decay": 0.9999,
+    "epsilon_min": 0.01
+  },
+  "train_episodes": 250000,
+  "train_time": 12.063793,
+  "train_win_rate": 0.414464,
+  "test_win_rate": 0.435,
+  "test_avg_return": -0.01425,
+  "timestamp": "2025-12-23T12:39:27.912753"
+}

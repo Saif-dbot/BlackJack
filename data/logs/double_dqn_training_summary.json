@@ -1,0 +1,10 @@
+{
+  "agent_type": "double_dqn",
+  "training_time_seconds": 2199.703542947769,
+  "total_episodes": 300000,
+  "final_win_rate": 0.4165,
+  "final_avg_return": -0.069,
+  "test_win_rate": 0.424,
+  "test_avg_return": -0.054,
+  "model_path": "data\\models\\naive\\double_dqn_final.pkl"
+}

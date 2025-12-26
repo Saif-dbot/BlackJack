@@ -1,0 +1,10 @@
+{
+  "agent_type": "sarsa",
+  "training_time_seconds": 47.34748339653015,
+  "total_episodes": 250000,
+  "final_win_rate": 0.427,
+  "final_avg_return": -0.049,
+  "test_win_rate": 0.437,
+  "test_avg_return": -0.05,
+  "model_path": "data\\models\\naive\\sarsa_final.pkl"
+}

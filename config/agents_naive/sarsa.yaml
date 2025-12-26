@@ -1,0 +1,26 @@
+# SARSA Agent Configuration
+
+agent:
+  type: sarsa
+  state_dim: 3  # (player_sum, dealer_card, usable_ace)
+  action_dim: 2  # HIT, STAND
+
+hyperparameters:
+  alpha: 0.1  # Augmenter le learning rate
+  gamma: 1.0  # No discounting for episodic tasks  
+  epsilon_start: 1.0
+  epsilon_min: 0.05  # Higher minimum for better exploration
+  epsilon_decay: 0.99995  # Slower decay
+
+training:
+  episodes: 300000
+  eval_frequency: 5000
+  eval_episodes: 1000
+  save_frequency: 10000
+  seed: 42
+
+environment:
+  deck_type: "finite"  # or "infinite"
+  num_decks: 6
+  natural: true
+  sab: true

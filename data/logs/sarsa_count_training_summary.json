@@ -1,0 +1,11 @@
+{
+  "agent_type": "sarsa_count",
+  "with_card_counting": true,
+  "training_time_seconds": 53.891740798950195,
+  "total_episodes": 300000,
+  "final_win_rate": 0.4335,
+  "final_avg_return": -0.047,
+  "test_win_rate": 0.42,
+  "test_avg_return": -0.074,
+  "model_path": "data\\models\\counting\\sarsa_count_final.pkl"
+}

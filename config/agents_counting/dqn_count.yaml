@@ -1,0 +1,30 @@
+# DQN with Card Counting configuration
+agent:
+  type: dqn_count
+  state_dim: 4  # (player_sum, dealer_card, usable_ace, true_count) - continuous
+  action_dim: 2  # STAND=0, HIT=1
+
+hyperparameters:
+  gamma: 1.0              # No discounting for episodic tasks
+  epsilon_start: 1.0      # Initial exploration rate
+  epsilon_min: 0.05       # Minimum exploration rate
+  epsilon_decay: 0.99995  # Slower decay
+  learning_rate: 0.001    # Adam optimizer
+  batch_size: 64          # Replay batch size
+  buffer_size: 100000     # Replay buffer capacity
+  target_update_freq: 1000  # Update target network every N steps
+  hidden_dim: 128         # Hidden layer size
+
+training:
+  episodes: 300000        # More episodes for card counting
+  eval_frequency: 5000    # Evaluate every N episodes
+  eval_episodes: 1000     # Number of evaluation episodes
+  save_frequency: 10000   # Save checkpoint every N episodes
+  seed: 42                # Random seed
+
+environment:
+  deck_type: finite       # Must be finite for counting
+  num_decks: 6            # Number of decks
+  natural: true           # Natural blackjack pays 1.5x
+  sab: true               # Stand after bust
+  enable_counting: true   # Enable card counting

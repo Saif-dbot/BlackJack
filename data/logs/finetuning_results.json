@@ -1,0 +1,32 @@
+{
+  "dqn": {
+    "before": {
+      "win_rate": 0.413,
+      "avg_return": -0.0565
+    },
+    "after": {
+      "win_rate": 0.409,
+      "avg_return": -0.0745
+    },
+    "improvement": {
+      "win_rate": -0.40000000000000036,
+      "avg_return": -0.017999999999999995
+    },
+    "time": 168.107376
+  },
+  "monte_carlo": {
+    "before": {
+      "win_rate": 0.438,
+      "avg_return": -0.017
+    },
+    "after": {
+      "win_rate": 0.433,
+      "avg_return": -0.019
+    },
+    "improvement": {
+      "win_rate": -0.5000000000000004,
+      "avg_return": -0.0019999999999999983
+    },
+    "time": 2.655556
+  }
+}
